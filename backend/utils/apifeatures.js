@@ -12,7 +12,19 @@ class ApiFeatures {
           },
         }
       : {};
-      this.query = this.query.find({...keyword})
+    this.query = this.query.find({ ...keyword });
+    return this;
+  }
+
+  filter() {
+    const queryCopy = { ...this.queryStr };
+
+    const excludeFields = ["keyword", "page", "limit"];
+
+    excludeFields.forEach((key) => delete queryCopy[key]);
+
+    this.query = this.query.find(queryCopy);
+    return this;
   }
 }
 
