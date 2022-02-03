@@ -15,9 +15,13 @@ exports.createProduct = catchAsyncErrors(async (req, res, next) => {
 
 //Get All Products
 exports.getAllProducts = catchAsyncErrors(async (req, res) => {
+  const itemsPerPage = 10;
+
   const apiFeatures = new ApiFeatures(Product.find(), req.query)
     .search()
-    .filter();
+    .filter()
+    .pagination(itemsPerPage);
+
   const products = await apiFeatures.query;
 
   res.status(200).json({
@@ -39,6 +43,7 @@ exports.updateProduct = catchAsyncErrors(async (req, res, next) => {
     runValidators: true,
     useFindAndModify: false,
   });
+
   res.status(200).json({
     success: true,
     product,
