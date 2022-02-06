@@ -81,7 +81,7 @@ exports.forgotPassword = catchAsyncErrors(async (req, res, next) => {
   try {
     await sendEmail({
       email: user.email,
-      subject: `Ecommerce Password Recovery`,
+      subject: `Shopaholic Password Recovery`,
       message,
     });
 
@@ -127,4 +127,3 @@ exports.resetPassword = catchAsyncErrors(async (req, res, next) => {
 
   sendToken(user, 200, res);
 });
- 
