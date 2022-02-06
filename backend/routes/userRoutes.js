@@ -7,9 +7,12 @@ const {
   resetPassword,
   getUserDetails,
   updatePassword,
+  updateProfile,
+  getAllUser,
+  getSingleUser,
 } = require("../controllers/userController");
 
-const { authenticatedUser, authorizedStaff } = require("../middleware/auth");
+const { authenticatedUser, authorizeRoles } = require("../middleware/auth");
 
 const router = express.Router();
 
@@ -26,5 +29,15 @@ router.route("/password/reset/:token").put(resetPassword);
 router.route("/me").get(authenticatedUser, getUserDetails);
 
 router.route("/password/update").put(authenticatedUser, updatePassword);
+
+router.route("/me/update").put(authenticatedUser, updateProfile);
+
+router
+  .route("/admin/users")
+  .get(authenticatedUser, authorizeRoles("admin"), getAllUser);
+
+router
+  .route("/admin/user/:id")
+  .get(authenticatedUser, authorizeRoles("admin"), getSingleUser);
 
 module.exports = router;

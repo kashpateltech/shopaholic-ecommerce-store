@@ -6,14 +6,21 @@ const {
   getProductDetails,
 } = require("../controllers/productController");
 const express = require("express");
-const { authenticatedUser, authorizedStaff } = require("../middleware/auth");
+const { authenticatedUser, authorizeRoles } = require("../middleware/auth");
 
 const router = express.Router();
 
 router.route("/products").get(getAllProducts);
-router.route("/products/new").post(authenticatedUser, authorizedStaff("admin"), createProduct);
-router.route("/product/:id").put(authenticatedUser,authorizedStaff("admin"),  updateProduct);
-router.route("/product/:id").delete(authenticatedUser, authorizedStaff("admin"), deleteProduct);
+
+router
+  .route("/admin/products/new")
+  .post(authenticatedUser, authorizeRoles("admin"), createProduct);
+
+router
+  .route("/admin/product/:id")
+  .put(authenticatedUser, authorizeRoles("admin"), updateProduct)
+  .delete(authenticatedUser, authorizeRoles("admin"), deleteProduct);
+  
 router.route("/product/:id").get(getProductDetails);
 
 module.exports = router;
