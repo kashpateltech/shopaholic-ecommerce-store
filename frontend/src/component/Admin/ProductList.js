@@ -6,7 +6,7 @@ import {
   clearErrors,
   getAdminProduct,
   deleteProduct,
-} from "../../actions/product-action";
+} from "../../actions/productAction";
 import { Link } from "react-router-dom";
 import { useAlert } from "react-alert";
 import { Button } from "@material-ui/core";

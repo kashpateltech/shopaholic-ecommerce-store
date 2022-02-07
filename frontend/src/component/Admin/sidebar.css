@@ -1,5 +1,5 @@
 .sidebar {
-  background-color: rgb(247, 247, 247);
+  background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   padding: 4rem 0;
@@ -14,17 +14,17 @@
 }
 
 .sidebar > a > img:hover {
-  filter: drop-shadow(0 0 10px rgb(241, 94, 68));
+  filter: drop-shadow(0 0 10px tomato);
 }
 .sidebar a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.493);
-  font: 200 1rem "Helvetica";
+  font: 200 1rem "Roboto";
   padding: 2rem;
   transition: all 0.5s;
 }
 .sidebar a:hover {
-  color: rgb(238, 94, 68);
+  color: tomato;
   transform: scale(1.1);
 }
 
@@ -37,5 +37,5 @@
 }
 
 .MuiTypography-root {
-  background-color: rgb(240, 240, 240) !important;
+  background-color: #fff !important;
 }

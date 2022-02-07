@@ -8,13 +8,13 @@
 
 .dashboardContainer {
   border-left: 1px solid rgba(0, 0, 0, 0.13);
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(255, 255, 255);
   padding: 3rem 0;
 }
 
 .dashboardContainer > h1 {
-  color: rgba(17, 17, 17, 0.733);
-  font: 300 2rem "Helvetica";
+  color: rgba(0, 0, 0, 0.733);
+  font: 300 2rem "Roboto";
   text-align: center;
   width: 50%;
   padding: 1.5rem;
@@ -27,23 +27,23 @@
 
 .dashboardSummary > div {
   display: flex;
-  background-color: rgb(243, 243, 243);
+  background-color: white;
   justify-content: center;
 }
 .dashboardSummary > div > p {
   background-color: rgba(70, 117, 218, 0.932);
-  color: rgb(247, 247, 247);
-  font: 300 1.3rem "Helvetica";
+  color: white;
+  font: 300 1.3rem "Roboto";
   text-align: center;
   padding: 1.5rem;
   width: 100%;
   margin: 0 2rem;
 }
 .dashboardSummaryBox2 > a {
-  color: rgb(26, 26, 26);
-  font: 300 2rem "Helvetica";
+  color: rgb(0, 0, 0);
+  font: 300 2rem "Roboto";
   text-align: center;
-  background-color: rgb(255, 225, 142);
+  background-color: rgb(255, 233, 174);
   text-decoration: none;
   padding: 1.5rem;
   width: 10vmax;
@@ -57,13 +57,13 @@
 }
 
 .dashboardSummaryBox2 > a:first-child {
-  background-color: rgb(241, 119, 119);
-  color: rgb(233, 233, 233);
+  background-color: rgb(255, 110, 110);
+  color: rgb(255, 255, 255);
 }
 
 .dashboardSummaryBox2 > a:last-child {
   background-color: rgb(51, 51, 51);
-  color: rgb(238, 238, 238);
+  color: rgb(255, 255, 255);
 }
 
 .lineChart {
@@ -92,6 +92,6 @@
   .dashboardSummaryBox2 > a {
     padding: 0.5rem;
     margin: 1rem;
-    font: 300 0.9rem "Helvetica";
+    font: 300 0.9rem "Roboto";
   }
 }

@@ -22,13 +22,13 @@
 }
 
 .CartItemCard > div > span {
-  font: 300 0.9vmax "Helvetica";
+  font: 300 0.9vmax "Roboto";
   color: rgba(24, 24, 24, 0.815);
 }
 
 .CartItemCard > div > p {
-  color: rgb(233, 87, 61);
-  font: 100 0.8vmax "Helvetica";
+  color: tomato;
+  font: 100 0.8vmax "Roboto";
   cursor: pointer;
 }
 
@@ -50,10 +50,10 @@
   }
 
   .CartItemCard > div > span {
-    font: 300 1.9vmax "Helvetica";
+    font: 300 1.9vmax "Roboto";
   }
 
   .CartItemCard > div > p {
-    font: 100 1.8vmax "Helvetica";
+    font: 100 1.8vmax "Roboto";
   }
 }

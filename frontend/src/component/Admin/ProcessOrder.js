@@ -7,7 +7,7 @@ import {
   getOrderDetails,
   clearErrors,
   updateOrder,
-} from "../../actions/order-action";
+} from "../../actions/orderAction";
 import { useSelector, useDispatch } from "react-redux";
 import Loader from "../layout/Loader/Loader";
 import { useAlert } from "react-alert";
@@ -140,8 +140,8 @@ const ProcessOrder = ({ history, match }) => {
                             {item.name}
                           </Link>{" "}
                           <span>
-                            {item.quantity} X ${item.price} ={" "}
-                            <b>${item.price * item.quantity}</b>
+                            {item.quantity} X ₹{item.price} ={" "}
+                            <b>₹{item.price * item.quantity}</b>
                           </span>
                         </div>
                       ))}

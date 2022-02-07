@@ -4,7 +4,7 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.171);
   padding: 2vmax;
   color: rgba(0, 0, 0, 0.678);
-  font: 500 1.5vmax "Helvetica";
+  font: 500 1.5vmax "Roboto";
   text-align: center;
 }
 
@@ -45,7 +45,7 @@
 }
 .page-link {
   text-decoration: none;
-  font: 300 0.7vmax "Helvetica";
+  font: 300 0.7vmax "Roboto";
   color: rgb(80, 80, 80);
   transition: all 0.3s;
 }
@@ -59,7 +59,7 @@
 }
 
 .pageItemActive {
-  background-color: rgb(233, 87, 61);
+  background-color: tomato;
 }
 
 .pageLinkActive {
@@ -80,13 +80,13 @@
 .category-link {
   list-style: none;
   color: rgba(0, 0, 0, 0.61);
-  font: 400 0.8vmax "Helvetica";
+  font: 400 0.8vmax "Roboto";
   margin: 0.4vmax;
   cursor: pointer;
   transition: all 0.5s;
 }
 .category-link:hover {
-  color: rgb(233, 87, 61);
+  color: tomato;
 }
 
 .filterBox > fieldset {
@@ -101,9 +101,9 @@
   }
 
   .page-link {
-    font: 300 1.7vmax "Helvetica";
+    font: 300 1.7vmax "Roboto";
   }
   .category-link {
-    font: 400 1.8vmax "Helvetica";
+    font: 400 1.8vmax "Roboto";
   }
 }

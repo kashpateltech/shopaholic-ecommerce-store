@@ -3,7 +3,7 @@ import { CgMouse } from "react-icons/all";
 import "./Home.css";
 import ProductCard from "./ProductCard.js";
 import MetaData from "../layout/MetaData";
-import { clearErrors, getProduct } from "../../actions/product-action";
+import { clearErrors, getProduct } from "../../actions/productAction";
 import { useSelector, useDispatch } from "react-redux";
 import Loader from "../layout/Loader/Loader";
 import { useAlert } from "react-alert";
@@ -30,7 +30,7 @@ const Home = () => {
           <MetaData title="SHOPAHOLIC" />
 
           <div className="banner">
-            <p>Welcome to SHOPAHOLIC</p>
+            <p>Welcome to Shopaholic</p>
             <h1>FIND AMAZING PRODUCTS BELOW</h1>
 
             <a href="#container">

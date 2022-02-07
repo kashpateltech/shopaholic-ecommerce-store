@@ -1,7 +1,7 @@
 .updateOrderForm {
   margin: 5vmax 0;
   padding: 3vmax;
-  background-color: rgb(241, 240, 240);
+  background-color: white;
 }
 
 .updateOrderForm > div {
@@ -14,7 +14,7 @@
   margin: 2rem 0;
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid rgba(24, 24, 24, 0.267);
+  border: 1px solid rgba(0, 0, 0, 0.267);
   border-radius: 4px;
   font: 300 0.9vmax cursive;
   outline: none;
@@ -24,7 +24,7 @@
   position: absolute;
   transform: translateX(1vmax);
   font-size: 1.6vmax;
-  color: rgba(20, 20, 20, 0.623);
+  color: rgba(0, 0, 0, 0.623);
 }
 
 @media screen and (max-width: 600px) {

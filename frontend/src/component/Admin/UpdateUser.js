@@ -12,7 +12,7 @@ import {
   getUserDetails,
   updateUser,
   clearErrors,
-} from "../../actions/user-action";
+} from "../../actions/userAction";
 import Loader from "../layout/Loader/Loader";
 
 const UpdateUser = ({ history, match }) => {

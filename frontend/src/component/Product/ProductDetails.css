@@ -28,7 +28,7 @@
 
 .detailsBlock-1 > h2 {
   color: rgb(54, 54, 54);
-  font: 600 1.6vmax "Helvetica";
+  font: 600 1.6vmax "Roboto";
 }
 
 .detailsBlock-1 > p {
@@ -83,7 +83,7 @@
   width: 1vmax;
   text-align: center;
   outline: none;
-  font: 400 0.8vmax "Helvetica";
+  font: 400 0.8vmax "Roboto";
   color: rgba(0, 0, 0, 0.74);
 }
 
@@ -92,8 +92,8 @@
   cursor: pointer;
   color: white;
   transition: all 0.5s;
-  background-color: rgb(233, 87, 61);
-  font: 500 0.7vmax "Helvetica";
+  background-color: tomato;
+  font: 500 0.7vmax "Roboto";
   border-radius: 20px;
   padding: 0.5vmax 2vmax;
   margin: 1vmax;
@@ -109,7 +109,7 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.205);
   padding: 1vmax 0;
   color: rgba(0, 0, 0, 0.651);
-  font: 400 1vmax "Helvetica";
+  font: 400 1vmax "Roboto";
   margin: 1vmax 0;
 }
 
@@ -125,8 +125,8 @@
 
 .submitReview {
   border: none;
-  background-color: rgb(233, 87, 61);
-  font: 500 0.7vmax "Helvetica";
+  background-color: tomato;
+  font: 500 0.7vmax "Roboto";
   border-radius: 20px;
   padding: 0.6vmax 2vmax;
   margin: 1vmax 0;
@@ -149,12 +149,12 @@
   margin: 1vmax 0;
   outline: none;
   padding: 1rem;
-  font: 300 1rem "Helvetica";
+  font: 300 1rem "Roboto";
 }
 
 .reviewsHeading {
   color: #000000be;
-  font: 500 1.4vmax "Helvetica";
+  font: 500 1.4vmax "Roboto";
   text-align: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.226);
   padding: 1vmax;
@@ -184,7 +184,7 @@
 }
 .reviewCard > p {
   color: rgba(0, 0, 0, 0.836);
-  font: 600 0.9vmax "Helvetica";
+  font: 600 0.9vmax "Roboto";
 }
 .reviewCardComment {
   color: rgba(0, 0, 0, 0.445);
@@ -244,11 +244,11 @@
   .detailsBlock-3-1-1 > input {
     padding: 1.5vmax;
     width: 3vmax;
-    font: 400 1.8vmax "Helvetica";
+    font: 400 1.8vmax "Roboto";
   }
 
   .detailsBlock-3-1 > button:last-child {
-    font: 500 1.7vmax "Helvetica";
+    font: 500 1.7vmax "Roboto";
     padding: 1.5vmax;
     width: 20vmax;
     margin: 3vmax 0;
@@ -257,7 +257,7 @@
   .detailsBlock-3 > p {
     padding: 2.5vmax 0;
     text-align: center;
-    font: 400 2vmax "Helvetica";
+    font: 400 2vmax "Roboto";
   }
 
   .detailsBlock-4 {
@@ -269,14 +269,14 @@
   }
 
   .submitReview {
-    font: 500 1.7vmax "Helvetica";
+    font: 500 1.7vmax "Roboto";
     padding: 1.5vmax;
     width: 20vmax;
     margin: 3vmax 0;
   }
 
   .reviewCard > p {
-    font: 600 3vw "Helvetica";
+    font: 600 3vw "Roboto";
   }
   .reviewCardComment {
     font: 300 5vw cursive;

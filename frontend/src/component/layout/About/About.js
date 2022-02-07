@@ -5,7 +5,7 @@ import YouTubeIcon from "@material-ui/icons/YouTube";
 import InstagramIcon from "@material-ui/icons/Instagram";
 const About = () => {
   const visitInstagram = () => {
-    window.location = "https://instagram.com/kashpate81";
+    window.location = "https://instagram.com/kashpatel81";
   };
   return (
     <div className="aboutSection">
@@ -21,13 +21,13 @@ const About = () => {
               src="https://res.cloudinary.com/tripleayt/image/upload/v1631555947/products/jpyibarlaxawvcvqjv5b.png"
               alt="Founder"
             />
-            <Typography>Kash Patel</Typography>
+            <Typography>Kaushik Patel</Typography>
             <Button onClick={visitInstagram} color="primary">
               Visit Instagram
             </Button>
             <span>
-              Shopping wesbite made by @KashPatel. Only with the
-              purpose to teach MERN Stack on the channel 6 Pack Programmer
+              A comprehensive e-commerce wesbite made by @kashpatel81. This
+              will have additional features added later.              
             </span>
           </div>
           <div className="aboutSectionContainer2">
@@ -39,7 +39,7 @@ const About = () => {
               <YouTubeIcon className="youtubeSvgIcon" />
             </a>
 
-            <a href="https://instagram.com/kashpat81" target="blank">
+            <a href="https://instagram.com/kashpatel81" target="blank">
               <InstagramIcon className="instagramSvgIcon" />
             </a>
           </div>

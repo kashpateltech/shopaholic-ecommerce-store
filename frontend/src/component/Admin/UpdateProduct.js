@@ -4,7 +4,7 @@ import {
   clearErrors,
   updateProduct,
   getProductDetails,
-} from "../../actions/product-action";
+} from "../../actions/productAction";
 import { useAlert } from "react-alert";
 import { Button } from "@material-ui/core";
 import MetaData from "../layout/MetaData";

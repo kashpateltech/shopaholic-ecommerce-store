@@ -12,7 +12,7 @@
 }
 
 .LoginSignUpBox {
-  background-color: rgb(240, 240, 240);
+  background-color: white;
   width: 25vw;
   height: 70vh;
   box-sizing: border-box;
@@ -24,7 +24,7 @@
 }
 .login_signUp_toggle > p {
   color: rgba(0, 0, 0, 0.678);
-  font: 300 1vmax "Helvetica";
+  font: 300 1vmax "Roboto";
   transition: all 0.5s;
   cursor: pointer;
   display: grid;
@@ -32,11 +32,11 @@
   width: 100%;
 }
 .login_signUp_toggle > p:hover {
-  color: rgb(233, 87, 61);
+  color: tomato;
 }
 
 .LoginSignUpBox > div > button {
-  background-color: rgb(233, 87, 61);
+  background-color: tomato;
   height: 3px;
   width: 50%;
   border: none;
@@ -127,9 +127,9 @@
 .loginBtn,
 .signUpBtn {
   border: none;
-  background-color: rgb(233, 87, 61);
+  background-color: tomato;
   color: white;
-  font: 300 0.9vmax "Helvetica";
+  font: 300 0.9vmax "Roboto";
   width: 100%;
   padding: 0.8vmax;
   cursor: pointer;
@@ -161,7 +161,7 @@
 
 @media screen and (max-width: 600px) {
   .LoginSignUpContainer {
-    background-color: rgb(240, 240, 240);
+    background-color: white;
   }
   .LoginSignUpBox {
     width: 100vw;
@@ -171,7 +171,7 @@
     height: 5vmax;
   }
   .login_signUp_toggle > p {
-    font: 300 1.5vmax "Helvetica";
+    font: 300 1.5vmax "Roboto";
   }
 
   .loginForm,
@@ -206,7 +206,7 @@
 
   .loginBtn,
   .signUpBtn {
-    font: 300 1.9vmax "Helvetica";
+    font: 300 1.9vmax "Roboto";
     padding: 1.8vmax;
   }
 }

@@ -11,7 +11,7 @@ import Products from "./component/Product/Products";
 import Search from "./component/Product/Search";
 import LoginSignUp from "./component/User/LoginSignUp";
 import store from "./store";
-import { loadUser } from "./actions/user-action";
+import { loadUser } from "./actions/userAction";
 import UserOptions from "./component/layout/Header/UserOptions";
 import { useSelector } from "react-redux";
 import Profile from "./component/User/Profile";
@@ -57,7 +57,7 @@ function App() {
   useEffect(() => {
     WebFont.load({
       google: {
-        families: ["Helvetica"],
+        families: ["Roboto", "Droid Sans", "Chilanka"],
       },
     });
 

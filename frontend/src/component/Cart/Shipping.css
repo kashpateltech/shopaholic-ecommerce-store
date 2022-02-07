@@ -8,7 +8,7 @@
 }
 
 .shippingBox {
-  background-color: rgb(241, 241, 241);
+  background-color: white;
   width: 25vw;
   height: 90vh;
   box-sizing: border-box;
@@ -17,8 +17,8 @@
 
 .shippingHeading {
   text-align: center;
-  color: rgba(19, 19, 19, 0.664);
-  font: 400 1.3vmax "Helvetica";
+  color: rgba(0, 0, 0, 0.664);
+  font: 400 1.3vmax "Roboto";
   padding: 1.3vmax;
   border-bottom: 1px solid rgba(0, 0, 0, 0.205);
   width: 50%;
@@ -63,9 +63,9 @@
 
 .shippingBtn {
   border: none;
-  background-color: rgb(226, 85, 60);
+  background-color: tomato;
   color: white;
-  font: 300 1vmax "Helvetica";
+  font: 300 1vmax "Roboto";
   width: 100%;
   padding: 1vmax;
   cursor: pointer;
@@ -75,7 +75,7 @@
 }
 
 .shippingBtn:hover {
-  background-color: rgb(168, 60, 41);
+  background-color: rgb(179, 66, 46);
 }
 
 @media screen and (max-width: 600px) {
@@ -85,7 +85,7 @@
   }
 
   .shippingHeading {
-    font: 400 6vw "Helvetica";
+    font: 400 6vw "Roboto";
     padding: 5vw;
   }
 
@@ -105,7 +105,7 @@
   }
 
   .shippingBtn {
-    font: 300 4vw "Helvetica";
+    font: 300 4vw "Roboto";
     padding: 4vw;
   }
 }

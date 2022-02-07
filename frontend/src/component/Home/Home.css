@@ -15,7 +15,7 @@
 .banner > h1 {
   margin: 5vmax;
 
-  font: 600 2.5vmax "Helvetica";
+  font: 600 2.5vmax "Roboto";
 }
 
 .banner > p {
@@ -25,13 +25,13 @@
 .banner > a > button {
   margin-bottom: 5vmax;
   cursor: pointer;
-  background-color: rgb(240, 240, 240);
+  background-color: white;
   border: 1px solid white;
   border-radius: 0;
   padding: 1vmax;
   transition: all 0.5s;
   width: 9vmax;
-  font: 500 1vmax "Helvetica";
+  font: 500 1vmax "Roboto";
 }
 .banner > a > button:hover {
   background-color: rgba(255, 255, 255, 0);
@@ -94,11 +94,11 @@
 
 .productCardSpan {
   margin: 0.5vmax;
-  font: 300 0.7vmax "Helvetica";
+  font: 300 0.7vmax "Roboto";
 }
 
 .productCard > p {
-  font-family: "Helvetica";
+  font-family: "Roboto";
   font-size: 1.2vmax;
   margin: 1vmax 0.5vmax;
   margin-bottom: 0;
@@ -106,7 +106,7 @@
 
 .productCard > span {
   margin: 0.5vmax;
-  color: rgb(233, 87, 61);
+  color: tomato;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 1vmax;
 }
@@ -133,6 +133,6 @@
 
   .productCard > div > span {
     margin: 0 0.5vmax;
-    font: 300 1vmax "Helvetica";
+    font: 300 1vmax "Roboto";
   }
 }
