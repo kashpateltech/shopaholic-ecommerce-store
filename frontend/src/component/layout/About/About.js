@@ -18,7 +18,7 @@ const About = () => {
           <div>
             <Avatar
               style={{ width: "10vmax", height: "10vmax", margin: "2vmax 0" }}
-              src="https://res.cloudinary.com/tripleayt/image/upload/v1631555947/products/jpyibarlaxawvcvqjv5b.png"
+              src="https://res.cloudinary.com/kashman/image/upload/v1644241637/avatars/golf-g495ff67a9_640_afcut7.png"
               alt="Founder"
             />
             <Typography>Kaushik Patel</Typography>
