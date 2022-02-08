@@ -34,7 +34,6 @@
 - Polished UI using React
 - Keeps a track of customers purchases, shippping info & status. 
 - Admin dashboard to keep track of inverntory, user details, revenue etc.
-- Static assets pre cached upon loading along with subsequent pages and static assets.
 
 ## Screenshots
 
