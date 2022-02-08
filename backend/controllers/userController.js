@@ -4,26 +4,59 @@ const User = require("../models/userModel");
 const sendToken = require("../utils/jwtToken");
 const sendEmail = require("../utils/sendEmail");
 const crypto = require("crypto");
-const cloudinary = require("cloudinary");
+const cloudinary = require("cloudinary").v2;
+//const { CloudinaryStorage } = require("multer-storage-cloudinary");
+const multer = require("multer");
+const upload = multer({dest: 'uploads/'}).single("image");
+
+var storage = multer.diskStorage({   
+  destination: function(req, file, cb) { 
+     cb(null, './uploads');    
+  }, 
+  filename: function (req, file, cb) { 
+     cb(null , file.originalname);   
+  }
+});
+
+
+if (process.env.NODE_ENV !== "PRODUCTION") {
+  require("dotenv").config({ path: "backend/config/config.env" });
+}
+
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+  // params: {
+  //   folder: "avatars",
+  //   width: 150,
+  //   crop: "scale",
+  // }
+});
+
 
 // Register a User
-exports.registerUser = catchAsyncErrors(async (req, res, next) => {
-  const myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
-    folder: "avatars",
-    width: 150,
-    crop: "scale",
-  });
-
+exports.registerUser = catchAsyncErrors(async (req, res) => {
+  //console.log(req.files.image)
+  // upload(req, res, (err) => {
+  //   if (err) {
+  //     res.json("Something went wrong")
+  //   } else {
+  //     cloudinary.uploader.upload(req.file.path)
+  //     .then((result) => console.log(result))
+  //     .catch((err) => console.log(err))
+  //   }
+  // })
   const { name, email, password } = req.body;
 
   const user = await User.create({
     name,
     email,
     password,
-    avatar: {
-      public_id: myCloud.public_id,
-      url: myCloud.secure_url,
-    },
+    // avatar: {
+    //   public_id: myCloud.public_id,
+    //   url: myCloud.secure_url,
+    // },
   });
 
   sendToken(user, 201, res);

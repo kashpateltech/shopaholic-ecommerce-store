@@ -49,7 +49,9 @@ const UpdateProfile = ({ history }) => {
     if (user) {
       setName(user.name);
       setEmail(user.email);
-      setAvatarPreview(user.avatar.url);
+      setAvatarPreview(
+        user.avatar && user.avatar.url ? user.avatar.url : "/Profile.png"
+      );
     }
 
     if (error) {
