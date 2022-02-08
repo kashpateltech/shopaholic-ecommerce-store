@@ -42,7 +42,7 @@
 
 ## Screenshots
 
-![JATE]![Screen Shot 2022-01-24 at 2 00 11 am](https://user-images.githubusercontent.com/88652187/150684700-b1242468-5ccd-449c-83ee-732c2d09e5d3.png)
+![SHOPAHOLIC]![Screen Shot 2022-02-08 at 3 52 46 pm](https://user-images.githubusercontent.com/88652187/152920606-7e20ae55-35c8-4d31-be95-efeacd4c26a1.png)
 
 ## Setup
 
