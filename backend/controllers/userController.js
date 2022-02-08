@@ -7,17 +7,16 @@ const crypto = require("crypto");
 const cloudinary = require("cloudinary").v2;
 //const { CloudinaryStorage } = require("multer-storage-cloudinary");
 const multer = require("multer");
-const upload = multer({dest: 'uploads/'}).single("image");
+const upload = multer({ dest: "uploads/" }).single("image");
 
-var storage = multer.diskStorage({   
-  destination: function(req, file, cb) { 
-     cb(null, './uploads');    
-  }, 
-  filename: function (req, file, cb) { 
-     cb(null , file.originalname);   
-  }
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "./uploads");
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.originalname);
+  },
 });
-
 
 if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config({ path: "backend/config/config.env" });
@@ -27,36 +26,16 @@ cloudinary.config({
   cloud_name: process.env.CLOUDINARY_NAME,
   api_key: process.env.CLOUDINARY_API_KEY,
   api_secret: process.env.CLOUDINARY_API_SECRET,
-  // params: {
-  //   folder: "avatars",
-  //   width: 150,
-  //   crop: "scale",
-  // }
 });
-
 
 // Register a User
 exports.registerUser = catchAsyncErrors(async (req, res) => {
-  //console.log(req.files.image)
-  // upload(req, res, (err) => {
-  //   if (err) {
-  //     res.json("Something went wrong")
-  //   } else {
-  //     cloudinary.uploader.upload(req.file.path)
-  //     .then((result) => console.log(result))
-  //     .catch((err) => console.log(err))
-  //   }
-  // })
   const { name, email, password } = req.body;
 
   const user = await User.create({
     name,
     email,
     password,
-    // avatar: {
-    //   public_id: myCloud.public_id,
-    //   url: myCloud.secure_url,
-    // },
   });
 
   sendToken(user, 201, res);
@@ -65,8 +44,6 @@ exports.registerUser = catchAsyncErrors(async (req, res) => {
 // Login User
 exports.loginUser = catchAsyncErrors(async (req, res, next) => {
   const { email, password } = req.body;
-
-  // checking if user has given password and email both
 
   if (!email || !password) {
     return next(new ErrorHandler("Please Enter Email & Password", 400));
@@ -108,7 +85,6 @@ exports.forgotPassword = catchAsyncErrors(async (req, res, next) => {
     return next(new ErrorHandler("User not found", 404));
   }
 
-  // Get ResetPassword Token
   const resetToken = user.getResetPasswordToken();
 
   await user.save({ validateBeforeSave: false });
@@ -140,9 +116,8 @@ exports.forgotPassword = catchAsyncErrors(async (req, res, next) => {
   }
 });
 
-// Reset Password
+// Password resetting
 exports.resetPassword = catchAsyncErrors(async (req, res, next) => {
-  // creating token hash
   const resetPasswordToken = crypto
     .createHash("sha256")
     .update(req.params.token)
@@ -185,7 +160,6 @@ exports.getUserDetails = catchAsyncErrors(async (req, res, next) => {
   });
 });
 
-// update User password
 exports.updatePassword = catchAsyncErrors(async (req, res, next) => {
   const user = await User.findById(req.user.id).select("+password");
 
@@ -206,7 +180,6 @@ exports.updatePassword = catchAsyncErrors(async (req, res, next) => {
   sendToken(user, 200, res);
 });
 
-// update User Profile
 exports.updateProfile = catchAsyncErrors(async (req, res, next) => {
   const newUserData = {
     name: req.body.name,
@@ -243,7 +216,7 @@ exports.updateProfile = catchAsyncErrors(async (req, res, next) => {
   });
 });
 
-// Get all users(admin)
+// get all users for admin access only
 exports.getAllUser = catchAsyncErrors(async (req, res, next) => {
   const users = await User.find();
 
@@ -253,7 +226,7 @@ exports.getAllUser = catchAsyncErrors(async (req, res, next) => {
   });
 });
 
-// Get single user (admin)
+// Get details for a single user for admin access only
 exports.getSingleUser = catchAsyncErrors(async (req, res, next) => {
   const user = await User.findById(req.params.id);
 
@@ -269,7 +242,7 @@ exports.getSingleUser = catchAsyncErrors(async (req, res, next) => {
   });
 });
 
-// update User Role -- Admin
+// updating user role for admin access only
 exports.updateUserRole = catchAsyncErrors(async (req, res, next) => {
   const newUserData = {
     name: req.body.name,
@@ -288,7 +261,7 @@ exports.updateUserRole = catchAsyncErrors(async (req, res, next) => {
   });
 });
 
-// Delete User --Admin
+// Deleting user for admin access only
 exports.deleteUser = catchAsyncErrors(async (req, res, next) => {
   const user = await User.findById(req.params.id);
 
