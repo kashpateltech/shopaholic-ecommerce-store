@@ -1,11 +1,7 @@
 # SHOPAHOLIC ECOMMERCE STORE
 
-> A PWA single page text editor that runs in the browser.
+> A simple ecommerce website.
 > Live demo [_here_](https://shopaholic-mern.herokuapp.com/).
-
-
-
-## Env Variables
 
 ## Table of Contents
 
