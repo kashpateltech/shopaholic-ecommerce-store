@@ -23,6 +23,7 @@
 
 - JavaScript
 - React
+- MaterialUI
 - Node.js
 - Express.js
 - MongoDB
