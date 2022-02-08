@@ -38,7 +38,7 @@
 
 ## Screenshots
 
-![SHOPAHOLIC]![Screen Shot 2022-02-08 at 3 52 46 pm](https://user-images.githubusercontent.com/88652187/152920606-7e20ae55-35c8-4d31-be95-efeacd4c26a1.png)
+[SHOPAHOLIC]![Screen Shot 2022-02-08 at 3 52 46 pm](https://user-images.githubusercontent.com/88652187/152920606-7e20ae55-35c8-4d31-be95-efeacd4c26a1.png)
 
 ## Setup
 
